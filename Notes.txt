@@ -1,0 +1,38 @@
+Day One
+======================
+npx is local to the build as opposed to npm
+public folder contains the HTML
+index.js is the default
+Port 3000 default
+
+ReactDOM.render()
+
+Any imports outside the defalt needs {} ,e.g. React { Component } or use React.Component explicitly
+
+this keyword references within the caller not the class like java 
+
+var range = {min: 10, max: 20}
+
+var bound = checkNumberinRange.bind(range)
+
+var checkNumberinRange = function (value) {
+    return this.min && this.max
+}
+
+bind returns a function with this containing whatever we pass into bind
+
+Used bind if you are going to call more than once
+
+Tell React to re-render by changing state this.setState()
+
+ref={el => } - raw DOM element through a function
+
+Load data in componentDidMount and in render have a isLoaded variable... should display loading icon or default text.
+
+Get around CORS server side should update the headers.
+    CORS Toggle chrome extension
+
+import BrowserRouter from 'react-router-dom' - Browser Router
+-- default behaviour if multiple match is to display all. 
+-- alternaitvely use Switch to select first match
+-- Redirect if you don't match anything.  This is useful for default behavious (landing)
