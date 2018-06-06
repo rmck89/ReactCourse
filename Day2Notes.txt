@@ -1,0 +1,25 @@
+Day 2
+
+FLUX Architecture - one way data flow, managing state of an application
+
+Major components:
+    Actions - created through action creator
+    Dispatcher (Singleton - in Redux can be multiple instances)
+    Store (Multiple instances - in Redux normally singleton) - only listens to actions
+    React Views
+
+Web sockets - Repository design pattern
+
+Gulp - task runner for JS - repetitive tasks
+
+Babel - JS compiler
+
+const {isLoaded} = props; assigns variable isLoaded from props.isLoaded
+
+ var props = { foo: 'default' };
+  var component = <Component {...props} foo={'override'} />;
+  console.log(component.props.foo); // 'override'
+
+Never modify props
+ 
+ import PropTypes from 'prop-types'

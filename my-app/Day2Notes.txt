@@ -1,0 +1,35 @@
+Day 2
+
+FLUX Architecture - one way data flow, managing state of an application
+
+Major components:
+    Actions - created through action creator
+    Dispatcher (Singleton - in Redux can be multiple instances)
+    Store (Multiple instances - in Redux normally singleton) - only listens to actions
+    React Views
+
+Web sockets - Repository design pattern
+
+Redux
+
+index.js within src/reducers folder contains the combineReducers
+
+export default means that when you use it in other files you can set it to what you want
+
+actions go into a sub-directory actions/index.js
+
+import React from 'react';
+import { connect } from 'react-redux';
+
+const Avatar = ({ user }) => (
+  <img src={user.avatar}/>
+);
+
+const mapStateToProps = state => ({
+  user: state.user
+});
+
+export { Avatar };
+export default connect(mapStateToProps)(Avatar);
+
+The component itself doesn’t know about Redux – it just accepts a user prop and renders the avatar image. The mapStateToProps function extracts the user from Redux’s store and maps it to the user prop. Finally, the connect function is what actually feeds the data from Redux through mapStateToProps and into Avatar.
